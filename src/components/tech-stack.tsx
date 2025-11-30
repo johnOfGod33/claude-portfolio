@@ -30,9 +30,9 @@ export function TechStack() {
           {technologies.map((tech) => (
             <div
               key={tech.name}
-              className="flex flex-col items-center justify-center p-6 bg-muted/30 rounded-2xl hover:bg-muted/50 transition-colors duration-300 space-y-4 group"
+              className="flex flex-col items-center justify-center p-4 bg-muted/30 rounded-2xl hover:bg-muted/50 transition-colors duration-300 space-y-4 group"
             >
-              <div className="relative w-16 h-16 flex items-center justify-center">
+              <div className="relative w-8 h-8 flex items-center justify-center">
                 <Image
                   src={tech.icon as string}
                   alt={tech.name}
@@ -40,9 +40,7 @@ export function TechStack() {
                   className="object-contain"
                 />
               </div>
-              <span className="font-medium text-sm md:text-base">
-                {tech.name}
-              </span>
+              <span className="font-bold text-xs md:text-sm ">{tech.name}</span>
             </div>
           ))}
         </div>
