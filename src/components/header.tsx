@@ -50,7 +50,7 @@ export default function Header() {
           </nav>
         </div>
         <div className="flex flex-auto justify-end items-center space-x-4 ">
-          <Button className="rounded-none w-5 h-5 p-2" size={"icon"}>
+          <Button className="rounded-none w-5 h-5 p-4" size={"icon"}>
             <Link href="#linkedin">
               <Linkedin />
             </Link>
