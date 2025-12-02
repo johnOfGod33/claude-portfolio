@@ -16,7 +16,7 @@ export default function Home() {
                 Hey, Je suis Claude SODOKIN
               </h1>
               <h2 className="text-lg md:text-xl text-muted-foreground font-medium">
-                Ingénieur en Génie Civil & Structure | Gestion de Projets
+                Technicien Génie Civil & Structure | Gestion de Projets
               </h2>
               <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                 Je conçois et dimensionne des structures fiables et durables,
@@ -59,7 +59,7 @@ export default function Home() {
             <div className="flex flex-col items-center space-y-8">
               <h2 className="text-3xl font-bold">What I do</h2>
               <p className="max-w-3xl mx-auto text-lg text-muted-foreground leading-relaxed text-justify">
-                Ingénieur en génie civil passionné par le dimensionnement
+                Technicien en génie civil passionné par le dimensionnement
                 structurel et la gestion complète de projets de construction,
                 j’accompagne les architectes, particuliers et promoteurs
                 immobiliers dans la conception, l’analyse et la réalisation de

@@ -22,7 +22,7 @@ export default function ContactPage() {
             size="lg"
             className="rounded-full px-6 h-12 bg-blue-500 hover:bg-blue-600 text-white"
           >
-            <Link href="mailto:sodokin@gmail.com">
+            <Link href="mailto:claudesodokin@gmail.com">
               <Mail className="mr-2 h-4 w-4" />
               Me Contacter
             </Link>
