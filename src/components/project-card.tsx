@@ -21,10 +21,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
     <Item
       className={`h-full overflow-hidden border-none shadow-sm hover:shadow-md transition-shadow duration-300 ${
         project.color || "bg-gray-50"
-      } p-4 gap-4`}
+      } p-4 md:p-6 gap-4 md:gap-6 flex-col md:flex-row`}
     >
-      <ItemMedia>
-        <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-md bg-white/50">
+      <ItemMedia className="w-full md:w-auto">
+        <div className="relative w-full md:w-40 md:h-40 h-48 md:shrink-0 overflow-hidden rounded-lg bg-white/50 shadow-md border-2 border-white/80 ring-1 ring-black/5">
           {project.imageUrl ? (
             <Image
               src={project.imageUrl}
@@ -39,33 +39,33 @@ export function ProjectCard({ project }: ProjectCardProps) {
           )}
         </div>
       </ItemMedia>
-      <ItemContent className="flex flex-col justify-between">
+      <ItemContent className="flex flex-col justify-between w-full">
         <div>
-          <ItemTitle className="text-xl font-bold leading-tight mb-2">
+          <ItemTitle className="text-lg md:text-xl font-bold leading-tight mb-2 md:mb-3">
             {project.title}
           </ItemTitle>
-          <ItemDescription className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
+          <ItemDescription className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
             {project.description}
           </ItemDescription>
         </div>
-      </ItemContent>
-      <ItemActions className="flex items-center">
-        <Button
-          asChild
-          variant="link"
-          className="p-0 h-auto font-semibold text-foreground hover:no-underline group"
-        >
-          <Link
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center"
+        <ItemActions className="flex items-center mt-4 md:mt-0">
+          <Button
+            asChild
+            variant="link"
+            className="p-0 h-auto font-semibold text-foreground hover:no-underline group"
           >
-            Voir le projet
-            <ExternalLink className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-          </Link>
-        </Button>
-      </ItemActions>
+            <Link
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center"
+            >
+              Voir le projet
+              <ExternalLink className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+            </Link>
+          </Button>
+        </ItemActions>
+      </ItemContent>
     </Item>
   );
 }

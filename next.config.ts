@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "www.notion.so",
+        hostname: "hulking-card-e35.notion.site",
       },
     ],
   },

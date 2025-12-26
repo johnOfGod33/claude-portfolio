@@ -12,8 +12,14 @@ export default function Header() {
   return (
     <Section>
       <header className="flex gap-4 h-[8vh]">
-        <div className="flex justify-start items-center flex-auto w-14 uppercase font-semibold">
-          <Link href="/">claude SDK</Link>
+        <div className="flex justify-start items-center flex-auto w-18 uppercase font-semibold">
+          <Link
+            href="/"
+            className="md:text-2xl text-md sm:text-lg tracking-wide"
+            style={{ fontFamily: "var(--font-teko)" }}
+          >
+            claude SODOKIN
+          </Link>
         </div>
         <div className="min-w-0 flex items-center justify-center">
           <nav className="flex space-x-1 md:space-x-4 items-center justify-center bg-gray-100 rounded-3xl p-1">
