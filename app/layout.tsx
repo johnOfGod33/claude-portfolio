@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@/src/components/theme-provider";
 import { cn } from "@/src/lib/utils";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Teko } from "next/font/google";
@@ -57,7 +58,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className="h-full">
+    <html lang="fr" className="h-full" suppressHydrationWarning>
       <body
         className={cn(
           geistMono.variable,
@@ -67,7 +68,14 @@ export default function RootLayout({
           "h-full"
         )}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

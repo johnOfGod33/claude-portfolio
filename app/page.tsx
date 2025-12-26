@@ -29,7 +29,7 @@ export default function Home() {
               <Button
                 asChild
                 size="lg"
-                className="rounded-full px-6 bg-blue-500 hover:bg-blue-600 text-white"
+                className="rounded-full px-6 bg-primary hover:bg-primary/90 text-primary-foreground"
               >
                 <Link href="/projects">
                   <LayoutGrid className="mr-2 h-4 w-4" />

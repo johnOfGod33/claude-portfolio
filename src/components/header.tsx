@@ -3,6 +3,7 @@ import { cn } from "@/src/lib/utils";
 import { Briefcase, Linkedin, Mail, User } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ModeToggle } from "./mode-toggle";
 import Section from "./section";
 import { Button } from "./ui/button";
 
@@ -22,12 +23,13 @@ export default function Header() {
           </Link>
         </div>
         <div className="min-w-0 flex items-center justify-center">
-          <nav className="flex space-x-1 md:space-x-4 items-center justify-center bg-gray-100 rounded-3xl p-1">
+          <nav className="flex space-x-1 md:space-x-4 items-center justify-center bg-muted/50 dark:bg-muted/30 rounded-3xl p-1 border border-border/50">
             <Link
               href="/"
               className={cn(
-                "rounded-3xl px-3 md:px-6 py-2 flex items-center gap-2 transition-all duration-300",
-                isActive("/") && "bg-background text-primary shadow-sm"
+                "rounded-3xl px-3 md:px-6 py-2 flex items-center gap-2 transition-all duration-300 hover:bg-accent/50",
+                isActive("/") &&
+                  "bg-background dark:bg-card text-primary shadow-sm"
               )}
             >
               <User className="size-4" />
@@ -36,8 +38,9 @@ export default function Header() {
             <Link
               href="/projects"
               className={cn(
-                "rounded-3xl px-3 md:px-6 py-2 flex items-center gap-2 transition-all duration-300",
-                isActive("projects") && "bg-background text-primary shadow-sm"
+                "rounded-3xl px-3 md:px-6 py-2 flex items-center gap-2 transition-all duration-300 hover:bg-accent/50",
+                isActive("projects") &&
+                  "bg-background dark:bg-card text-primary shadow-sm"
               )}
             >
               <Briefcase className="size-4" />
@@ -46,8 +49,9 @@ export default function Header() {
             <Link
               href="/contact"
               className={cn(
-                "rounded-3xl px-3 md:px-6 py-2 flex items-center gap-2 transition-all duration-300",
-                isActive("contact") && "bg-background text-primary shadow-sm"
+                "rounded-3xl px-3 md:px-6 py-2 flex items-center gap-2 transition-all duration-300 hover:bg-accent/50",
+                isActive("contact") &&
+                  "bg-background dark:bg-card text-primary shadow-sm"
               )}
             >
               <Mail className="size-4" />
@@ -67,6 +71,7 @@ export default function Header() {
               <Linkedin />
             </Button>
           </Link>
+          <ModeToggle />
         </div>
       </header>
     </Section>
